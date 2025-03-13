@@ -20,7 +20,7 @@ export const Home = () => {
     <>
       <div className="bg-pic">
         <div className="welcome-text">
-          <p className="reserve">RESERVE YOUR SLOT</p>
+          <p className="reserve">RESERVE</p>
           <p className="now">NOW! <br /> <Link to="/bookcourt"><Button variant="outline-danger" className="butt">Make Reservation Now!</Button></Link></p>
           
         </div>
