@@ -1,0 +1,87 @@
+.loginbg {
+  background-image: url(../assets/images/bg-court.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 695px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: rgba(136,194,115, 0.3);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins';
+}
+
+.form-container {
+  text-align: center;
+}
+
+.loghead{
+  margin-bottom: 20px;
+  color: white;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+  color: white;
+}
+
+label{
+  display: block;
+  margin-bottom: 5px;
+}
+
+.loginput{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+input:focus{
+  border-color: yellow;
+  outline: none;
+}
+
+.logsbtn{
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.logsbtn:hover {
+  background-color: #0056b3;
+}
+
+.toggle-text {
+  margin-top: 10px;
+  font-size: 14px;
+  color: rgb(189, 189, 189)
+}
+
+.toggle-link {
+  color: #007bff;
+  cursor: pointer;
+}
+
+.toggle-link:hover {
+  text-decoration: underline;
+}

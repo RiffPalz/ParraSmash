@@ -1,0 +1,85 @@
+.contact-bg{
+    background-image: url(../assets/images/bg-court.jpg);
+    background-size: cover ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 695px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-header{
+    margin-top: 70px;
+}
+
+.contact-form-container{
+    width: 500px;
+    margin: 10px auto;
+    padding: 30px;
+    background-color: rgba(136,194,115, 0.3);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Header styling */
+.contact-title{
+    font-size: 50px;
+    font-family: "Poppins";
+    color: white;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.contact-desc{
+    font-size: 'Poppins';
+    color: rgb(188, 188, 188);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0;
+}
+
+/* Form input fields */
+.contact-form .contact-input,
+.contact-form .contact-textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    outline: none;
+    color: #333333;
+    border-radius: 10px;
+}
+
+.contact-textarea{
+    height: 100px;
+}
+
+/* Input placeholder styling */
+.contact-form .contact-input::placeholder,
+.contact-form .contact-textarea::placeholder {
+    color: #aaaaaa;
+    font-family: 'Poppins';
+    font-size: 15px;
+}
+
+/* Button styling */
+.contact-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 15px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: white;
+}
+
+.contact-button:hover {
+    background-color: #0056b3;
+}
+

@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Oswald;
+  src: url(./assets/fonts/Oswald-Regular.ttf);
+  font-family: Poppins;
+  src: url(assets/fonts/Poppins-Regular.otf);
+  font-family: Poppins-Bold;
+  src: url(assets/fonts/Poppins-Bold.otf);
+}
+
+
+@media(max-width: 900px){
+  .welcome-text {
+      justify-content: center;
+      align-items: center;
+      margin: 0px 10px 0px 10px;
+      padding-left: 16rem;
+    }
+  
+    .container {
+      padding: 15px;
+      width: 90%;
+    }
+  
+    .loghead {
+      font-size: 24px;
+    }
+  
+    .loginput {
+      padding: 8px;
+    }
+  
+    .logsbtn {
+      padding: 8px;
+      font-size: 14px;
+    }
+}

@@ -1,0 +1,100 @@
+.about-bg{
+    background-image: url(../assets/images/bg-court.jpg);
+    background-size: cover ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 695px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-welcome{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.glow-parrasmash{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-family: "Bebas Neue";
+    font-size: 70px;
+    margin-bottom: -30px;
+    color: white;
+    animation: big 1s ease-in-out infinite alternate;
+}
+
+@keyframes big {
+    from {
+        text-shadow: 0 5px 20px #a2c32d;
+    }
+    to {
+        text-shadow: 0 5px 30px #4ababa, 0 0 10px #d9ff00;
+    }
+}
+
+.about-desc{
+    color: rgb(202, 202, 202);
+    text-shadow: 10px black;
+    font-size: 15px;
+}
+
+.select{
+    width: 600px;
+    border: none;
+    color: white;
+}
+
+.select-header{
+    font-family: 'Poppins';
+    font-size: 100px;
+    
+}
+
+.about-selection .select {
+    margin-top: 15px;
+}
+
+.select-body {
+    font-size: 15px;
+    font-family: 'Poppins';
+    font-weight: 300;
+    color: white;
+}
+
+.select-item{
+    background-color: rgba(136,194,115, 0.3);
+}
+
+.select .accordion-button.collapsed {
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+
+.about-selection .accordion-button:not(.collapsed){
+    box-shadow: 0 0 10px  rgba(136,194,115, 0.3);
+}
+
+.select .select-header:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+
+.red2bg{
+    font-family: 'Poppins', sans-serif;
+    margin-top: 50px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 400;
+    margin-right: 15px;
+}
+
+.red2bg:hover{
+    background-color: rgb(104, 144, 89);
+}

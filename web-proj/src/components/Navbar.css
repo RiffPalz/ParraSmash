@@ -1,0 +1,139 @@
+.logo{
+    height: 60px;
+    align-items: center;
+}
+
+li{
+    list-style: none;
+}
+
+header{
+    background-color: rgba(0, 0, 0,0.3);
+    position: fixed;
+    width: 100%;
+    transition: background-color 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+/* Right Side */
+.nav-menu {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 45px;
+}
+
+.nav-link {
+    color: rgb(112, 112, 112);
+    font-size: 17px;
+    font-family: 'Oswald';
+    padding-top: 25px;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Scrolled Transition */
+header.scrolled .nav-link{
+    color: rgb(179, 179, 179);
+}
+header.scrolled .nav-link.active{
+    color: black;
+}
+header.scrolled .nav-link:hover{
+    color: black;
+}
+header.scrolled{
+    background-color: white;
+    opacity: 0.85;
+}
+/* ------------------------- */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: 2px;
+    transition: 0.5s;
+}
+
+.nav-link:hover, .active {
+    color: white;
+}
+
+.nav-link:hover::after {
+    cursor: pointer;
+    width: 100%;
+}
+
+
+/* burger icon */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+
+
+/* Responsive */
+@media(max-width: 900px) {
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: rgba(142, 153, 162, 0.8);
+        width: 100%;
+        align-items: center;
+        transition: 0.5s;
+    }
+
+    .nav-item{
+        margin: 10px;
+    }
+
+    .nav-menu.active{
+        left: 0;
+    }
+    
+    .logo {
+        height: 70px;
+        margin: auto;
+        padding-left: 15rem;
+    }
+}
+
