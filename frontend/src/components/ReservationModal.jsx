@@ -119,20 +119,20 @@ function Panel({ onClose, title, step, children }) {
       onClick={(e) => e.stopPropagation()}
     >
       {/* Header */}
-      <div className="flex items-center justify-between px-8 py-5 border-b border-gray-100 shrink-0">
-        <div>
-          <h2 className="text-xl font-black text-gray-900">{title}</h2>
-          <div className="flex items-center gap-2 mt-1.5">
+      <div className="flex items-start justify-between px-4 sm:px-8 py-4 sm:py-5 border-b border-gray-100 shrink-0 gap-3">
+        <div className="min-w-0">
+          <h2 className="text-lg sm:text-xl font-black text-gray-900">{title}</h2>
+          <div className="flex items-center gap-1.5 mt-1.5 flex-wrap">
             {steps.map((s, i) => (
-              <div key={s} className="flex items-center gap-1.5">
-                <div className={`w-5 h-5 rounded-full text-[10px] font-black flex items-center justify-center ${
+              <div key={s} className="flex items-center gap-1">
+                <div className={`w-5 h-5 rounded-full text-[10px] font-black flex items-center justify-center shrink-0 ${
                   i + 1 < step   ? "bg-emerald-600 text-white" :
                   i + 1 === step ? "bg-emerald-600 text-white ring-4 ring-emerald-100" :
                                    "bg-gray-100 text-gray-400"
                 }`}>
                   {i + 1 < step ? "✓" : i + 1}
                 </div>
-                <span className={`text-xs font-semibold ${i + 1 === step ? "text-gray-800" : "text-gray-400"}`}>{s}</span>
+                <span className={`text-xs font-semibold hidden sm:inline ${i + 1 === step ? "text-gray-800" : "text-gray-400"}`}>{s}</span>
                 {i < steps.length - 1 && <span className="text-gray-200 text-xs mx-0.5">›</span>}
               </div>
             ))}
@@ -141,7 +141,7 @@ function Panel({ onClose, title, step, children }) {
         <button
           onClick={onClose}
           aria-label="Close"
-          className="w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-gray-500 hover:text-gray-800 transition-colors"
+          className="w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-gray-500 hover:text-gray-800 transition-colors shrink-0"
         >
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -150,7 +150,7 @@ function Panel({ onClose, title, step, children }) {
       </div>
 
       {/* Scrollable body */}
-      <div className="overflow-y-auto px-8 py-6 flex flex-col gap-5">
+      <div className="overflow-y-auto px-4 sm:px-8 py-5 sm:py-6 flex flex-col gap-5">
         {children}
       </div>
     </div>
@@ -233,7 +233,7 @@ export default function ReservationModal({ court, onClose }) {
     return (
       <Backdrop onClose={onClose}>
         <div
-          className="w-full max-w-md bg-white rounded-3xl shadow-2xl p-10 text-center animate-[fadeSlideUp_0.25s_ease]"
+          className="w-full max-w-md bg-white rounded-3xl shadow-2xl p-6 sm:p-10 text-center animate-[fadeSlideUp_0.25s_ease]"
           onClick={(e) => e.stopPropagation()}
         >
           <div className="w-20 h-20 rounded-full bg-emerald-100 flex items-center justify-center mx-auto mb-6">
@@ -316,7 +316,7 @@ export default function ReservationModal({ court, onClose }) {
           <div className="flex-1 space-y-4 min-w-0">
 
             {/* Name */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Field label="First Name" error={errors.firstName}>
                 <input
                   type="text"
@@ -338,7 +338,7 @@ export default function ReservationModal({ court, onClose }) {
             </div>
 
             {/* Email + Phone */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Field label="Email Address" error={errors.email}>
                 <input
                   type="email"
@@ -361,7 +361,7 @@ export default function ReservationModal({ court, onClose }) {
             </div>
 
             {/* Date + Time */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Field label="Date" error={errors.date}>
                 <input
                   type="date"
@@ -382,7 +382,7 @@ export default function ReservationModal({ court, onClose }) {
             </div>
 
             {/* Duration + Players */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Field label="Duration (hours)">
                 <select value={form.duration} onChange={set("duration")} className={inputCls()}>
                   {DURATIONS.map((d) => (

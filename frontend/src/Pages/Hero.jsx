@@ -81,7 +81,7 @@ export default function Hero() {
         <div
           data-aos="fade-up"
           data-aos-delay="500"
-          className="mt-16 grid grid-cols-3 gap-6 max-w-lg mx-auto"
+          className="mt-16 grid grid-cols-3 gap-3 sm:gap-6 max-w-lg mx-auto"
         >
           {[
             { value: "6+",       label: "Courts" },
@@ -89,7 +89,7 @@ export default function Hero() {
             { value: "6AM–11PM", label: "Daily Hours" },
           ].map((s) => (
             <div key={s.label} className="text-center">
-              <p className="text-2xl font-black text-white">{s.value}</p>
+              <p className="text-xl sm:text-2xl font-black text-white">{s.value}</p>
               <p className="text-xs text-gray-400 mt-0.5 font-medium">{s.label}</p>
             </div>
           ))}
