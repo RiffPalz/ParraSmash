@@ -1,30 +1,30 @@
-import './App.css'
-import {Navbar} from './components/Navbar'
-import {Home} from './Pages/Home'
-import {Reserve} from './Pages/Reserve'
-import {About} from './Pages/About'
-import {ContactUs} from './Pages/ContactUs'
-import {Log_in} from './Pages/Log_In'
-import { Routes, Route } from 'react-router-dom'
+import "./App.css";
+import Navbar         from "./components/Navbar";
+import ScrollToTop    from "./components/ScrollToTop";
+import Hero           from "./Pages/Hero";
+import About          from "./Pages/About";
+import Courts         from "./Pages/Courts";
+import Features       from "./Pages/Features";
+import BookingProcess from "./Pages/BookingProcess";
+import Contact        from "./Pages/Contact";
+import Footer         from "./Pages/Footer";
 
-function App() {
-  
+export default function App() {
   return (
-    <>
-      <Navbar/>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/bookcourt" element={<Reserve />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact-us" element={<ContactUs />} />
-        <Route path="/login" element={<Log_in />} />
-      </Routes>
-      
-      
-      
+    <div className="font-['Inter','Poppins',sans-serif] text-gray-800 bg-white overflow-x-hidden selection:bg-emerald-200 selection:text-emerald-900">
+      <Navbar />
 
-    </>
-  )
+      <main>
+        <Hero />
+        <About />
+        <Courts />
+        <Features />
+        <BookingProcess />
+        <Contact />
+      </main>
+
+      <Footer />
+      <ScrollToTop />
+    </div>
+  );
 }
-
-export default App
