@@ -29,7 +29,7 @@ export default function Modal({ isOpen, onClose, title, children }) {
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-8 py-5 border-b border-gray-100">
+        <div className="flex items-center justify-between px-5 sm:px-8 py-5 border-b border-gray-100">
           <h2 className="text-xl font-black text-gray-900">{title}</h2>
           <button
             onClick={onClose}
@@ -43,12 +43,12 @@ export default function Modal({ isOpen, onClose, title, children }) {
         </div>
 
         {/* Scrollable body */}
-        <div className="overflow-y-auto px-8 py-6 text-sm text-gray-600 leading-relaxed space-y-5">
+        <div className="overflow-y-auto px-5 sm:px-8 py-6 text-sm text-gray-600 leading-relaxed space-y-5">
           {children}
         </div>
 
         {/* Footer */}
-        <div className="px-8 py-4 border-t border-gray-100 bg-gray-50 flex justify-end">
+        <div className="px-5 sm:px-8 py-4 border-t border-gray-100 bg-gray-50 flex justify-end">
           <button
             onClick={onClose}
             className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-2.5 rounded-full text-sm transition-colors shadow-md shadow-emerald-600/20"

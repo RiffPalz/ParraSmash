@@ -52,7 +52,7 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
           {/* Left: image */}
-          <div data-aos="fade-right" data-aos-delay="100" className="relative">
+          <div data-aos="fade-right" data-aos-delay="100" className="relative pb-8 sm:pb-0">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-gray-200">
               <img
                 src={indoorCourt}
@@ -61,7 +61,7 @@ export default function About() {
               />
               <div className="absolute inset-0 bg-linear-to-t from-gray-900/40 to-transparent" />
             </div>
-            <div className="absolute -bottom-5 -right-5 bg-emerald-600 text-white rounded-2xl px-6 py-4 shadow-xl shadow-emerald-600/30">
+            <div className="absolute bottom-0 right-0 sm:-bottom-5 sm:-right-5 bg-emerald-600 text-white rounded-2xl px-6 py-4 shadow-xl shadow-emerald-600/30">
               <p className="text-3xl font-black leading-none">6+</p>
               <p className="text-xs font-semibold text-emerald-100 mt-0.5">Premium Courts</p>
             </div>

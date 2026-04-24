@@ -106,7 +106,7 @@ export default function Contact() {
           </div>
 
           {/* Right: form */}
-          <div data-aos="fade-left" data-aos-delay="150" className="bg-white rounded-3xl shadow-xl shadow-gray-200/60 border border-gray-100 p-8">
+          <div data-aos="fade-left" data-aos-delay="150" className="bg-white rounded-3xl shadow-xl shadow-gray-200/60 border border-gray-100 p-5 sm:p-8">
             <h3 className="text-xl font-bold text-gray-900 mb-6">Send a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid sm:grid-cols-2 gap-4">
